@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  app: # Define the Spring Boot app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Maps app container port 8080 to localhost:8080
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/fastlight # Optional: Sets the active Spring profile
+    depends_on:
+      - mongo # Ensure MongoDB starts first
+
+  mongo: # Define the MongoDB service
+    image: mongo:6.0 # Specify the MongoDB version
+    container_name: mongo
+    ports:
+      - "27017:27017" # Maps MongoDB container port 27017 to localhost:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin # MongoDB root username
+      MONGO_INITDB_ROOT_PASSWORD: password # MongoDB root password
+      MONGO_INITDB_DATABASE: fastlight # Initial database to create
+    volumes:
+      - mongo_data:/data/db # Persist MongoDB data in a named volume
+
+volumes:
+  mongo_data:
+    driver: local # Local named volume for MongoDB data persistence

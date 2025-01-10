@@ -1,0 +1,19 @@
+mutation CustomerMutation {
+  createCustomer (customerInput: {
+    name: "Abhijit"
+    gender: "M"
+    contact: 984753859
+    mail: "abc@gmail.com"
+    accounts : [{
+      accountNumber: 123
+      accountStatus: Active
+      accountBalance: 345
+    }
+
+    ]
+  }){
+  customerNumber
+  name
+  contact
+}
+}
