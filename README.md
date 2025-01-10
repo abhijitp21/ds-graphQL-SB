@@ -1,7 +1,4 @@
-## AI Assistant
-Here's a sample **README.md** file for the `CustomerDataFetcher` service implementation. The README aims to describe the purpose of the class, provide an overview, and guide developers on how to use, test, and maintain it.
 
----
 
 # CustomerDataFetcher Service
 
