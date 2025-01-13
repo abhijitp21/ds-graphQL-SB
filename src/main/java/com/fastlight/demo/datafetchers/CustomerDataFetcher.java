@@ -44,6 +44,7 @@ public class CustomerDataFetcher {
     @DgsData(parentType = "Customer", field = "accounts")
     public List<Account> getCustomerAccounts(DgsDataFetchingEnvironment environment) {
         Customer customer = environment.getSource();
+        customer = null;
         return customer.getAccounts().stream()
                 .map(account -> fetchAccountById(account.getAccountId()))
                 .collect(Collectors.toList());
