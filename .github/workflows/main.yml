@@ -20,5 +20,5 @@ jobs:
           AZURE_OPENAI_API_KEY: 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
           AZURE_OPENAI_API_VERSION: "2024-05-01-preview"
           AZURE_OPENAI_DEPLOYMENT: "gpt-4o"
-          AZURE_OPENAI_ENDPOINT: "https://your-openai-endpoint.openai.azure.com/"
+          AZURE_OPENAI_ENDPOINT: "https://api.openai.com/v1/models"
           exclude: "**/*.json, **/*.md" # Optional: exclude patterns separated by commas
