@@ -17,6 +17,6 @@ jobs:
         uses: aidar-freeed/ai-codereviewer@v2.7.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # The GITHUB_TOKEN is there by default so you just need to keep it like it is and not necessarily need to add it as secret as it will throw an error. [More Details](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret)
-          OPENAI_API_KEY: "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"
+          OPENAI_API_KEY: "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"
           OPENAI_API_MODEL: "gpt-4" # Optional: defaults to "gpt-4"
           exclude: "**/*.json, **/*.md" # Optional: exclude patterns separated by commas
