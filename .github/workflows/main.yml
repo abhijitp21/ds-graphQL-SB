@@ -14,11 +14,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: AI Code Reviewer
-        uses: cheton/ai-code-reviewer@v0.1.0
+        uses: aidar-freeed/ai-code-reviewer@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # The GITHUB_TOKEN is there by default so you just need to keep it like it is and not necessarily need to add it as secret as it will throw an error. [More Details](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret)
-          AZURE_OPENAI_API_KEY: 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
-          AZURE_OPENAI_API_VERSION: "2024-05-01-preview"
-          AZURE_OPENAI_DEPLOYMENT: "gpt-4o"
-          AZURE_OPENAI_ENDPOINT: "https://api.openai.com/v1/chat/completions"
+          OPENAI_API_KEY: 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
+          OPENAI_API_MODEL: "gpt-4" # Optional: defaults to "gpt-4"
           exclude: "**/*.json, **/*.md" # Optional: exclude patterns separated by commas
