@@ -1,6 +1,6 @@
 
 
-# CustomerDataFetcher Service + DGS Framework
+# CustomerDataFetcher Service + DGS Framework + DB
 
 The `CustomerDataFetcher` class is a **GraphQL Data Fetcher** that handles queries and mutations related to `Customer` and `Account` entities within the application. This service integrates with `CustomerRepository` and `AccountRepository` to perform database operations and is annotated as a `@DgsComponent`, making it part of the Netflix DGS framework for GraphQL.
 
